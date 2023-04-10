@@ -1,0 +1,10 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:alpine",
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/github/c_practice,target=/workspace,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": [
+        "apk update",
+        "apk add alpine-sdk cmake clang libressl-dev vim"
+    ]
+}
